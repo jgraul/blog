@@ -33,8 +33,18 @@
 	<input type="text" id="room_name"><br>
     <input type="submit" value="Conecta!" />
 </form>
-<script>
-var room_name = document.getElementById("room_name").value;
+   <script src="https://meet.jit.si/external_api.js"></script>
+        <script>
+            var domain = "Lapruebadeinvasion";
+            var options = {
+                roomName: "JitsiMeetAPIExample",
+                width: 700,
+                height: 400,
+                parentNode: undefined,
+                configOverwrite: {},
+                interfaceConfigOverwrite: {}
+            }
+            var api = new JitsiMeetExternalAPI(domain, options);
 </script>
 </body>
 </html>
